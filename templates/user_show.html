@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>See more information about {{user.username}}</h1>
+  {% for todo in user.todos %}
+    <p>
+      {{todo.task}} - is it done? {{todo.is_completed}}
+    </p>
+  {% endfor %}
+{% endblock %}
